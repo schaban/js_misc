@@ -1,0 +1,5 @@
+skin.vert
+unlit.frag
+Pos Nrm RGB Tex Jnt Wgt
+SkinMtx ViewProj BaseColor
+Base
