@@ -37,7 +37,7 @@ class SCN {
 		if (!this.gl) {
 			return;
 		}
-		const files = [];
+		const files = {};
 		for (const fpath of flst) {
 			const fname = getFileName(fpath);
 			files[fname] = null;

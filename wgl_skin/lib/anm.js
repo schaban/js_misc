@@ -85,7 +85,7 @@ class ANM {
 		for (let i = 0; i < this.nnodes; ++i) {
 			this.nodes[i] = new ANM_NODE(dat, nodesOffs + i*0x20, strsTop, this.nfrm);
 		}
-		this.map = new Map();
+		this.map = {};
 		for (let i = 0; i < this.nnodes; ++i) {
 			const node = this.nodes[i];
 			this.map[node.name] = node;

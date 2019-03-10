@@ -21,7 +21,7 @@ class SKEL {
 			}
 		}
 		this.calcWorld();
-		this.map = new Map();
+		this.map = {};
 		for (let i = 0; i < n; ++i) {
 			this.map[mdl.skelNames[i]] = i;
 		}
