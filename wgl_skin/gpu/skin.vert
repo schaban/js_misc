@@ -7,7 +7,7 @@ attribute vec2 vtxTex;
 attribute vec4 vtxJnt;
 attribute vec4 vtxWgt;
 
-uniform mat4 prmSkinMtx[64];
+uniform mat4 prmSkinMtx[30];
 uniform mat4 prmViewProj;
 
 varying vec3 pixPos;
