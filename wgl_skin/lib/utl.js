@@ -16,6 +16,15 @@ function hex(x) {
 	return x.toString(16);
 }
 
+function dbgmsg(msg = "") {
+	const dbg = document.getElementById("dbgmsg");
+	if (dbg) {
+		dbg.innerHTML += msg + "<br>";
+	} else {
+		console.log(msg);
+	}
+}
+
 function getFileName(fpath) {
 	return fpath.substring(fpath.lastIndexOf("/")+1);
 }

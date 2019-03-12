@@ -23,12 +23,12 @@ class SCN {
 
 	clear() {
 		this.files = null;
-		this.vertShaders = [];
-		this.fragShaders = [];
-		this.progs = [];
-		this.models = [];
-		this.textures = [];
-		this.anims = [];
+		this.vertShaders = {};
+		this.fragShaders = {};
+		this.progs = {};
+		this.models = {};
+		this.textures = {};
+		this.anims = {};
 	}
 
 
@@ -90,9 +90,9 @@ class SCN {
 
 	printFiles() {
 		if (!this.files) return;
-		console.log("Scene files:");
+		dbgmsg("Scene files:");
 		for (const fname in this.files) {
-			console.log(typeof this.files[fname] === "string" ? "txt" : "bin", dataKind(this.files[fname]), ":", fname);
+			dbgmsg((typeof this.files[fname] === "string" ? "txt" : "bin") + " " + dataKind(this.files[fname]) + ": " + fname);
 		}
 	}
 }
