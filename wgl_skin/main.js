@@ -57,8 +57,10 @@ function start() {
 function main() {
 	console.clear();
 
+	const pk = parseHexPkElem();
+
 	scene.init();
-	scene.load([
+	scene.load(pk ? pk : [
 		"dat/YWM.mdd",
 		"dat/Eye_BASE.txd",
 		"dat/Head_BASE.txd",
