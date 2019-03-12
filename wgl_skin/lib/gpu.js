@@ -28,9 +28,15 @@ function compileFragShader(src) {
 	return compileShader(src, gl.FRAGMENT_SHADER);
 }
 
+function ckAttLoc(loc) {
+	return (typeof loc === "number") && (loc >= 0);
+}
+
 function setVtxAttr(gl, loc, nelems, offs, stride) {
-	gl.enableVertexAttribArray(loc);
-	gl.vertexAttribPointer(loc, nelems, gl.FLOAT, false, stride, offs);
+	if (ckAttLoc(loc)) {
+		gl.enableVertexAttribArray(loc);
+		gl.vertexAttribPointer(loc, nelems, gl.FLOAT, false, stride, offs);
+	}
 	return offs + nelems*4;
 }
 
@@ -38,9 +44,6 @@ function setPrmMtx(gl, loc, mtx) {
 	if (loc) gl.uniformMatrix4fv(loc, false, mtx.e);
 }
 
-function ckAttLoc(loc) {
-	return typeof loc === "number" && loc >= 0;
-}
 
 class GPU_PROG {
 	constructor(descr) {

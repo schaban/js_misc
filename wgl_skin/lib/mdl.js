@@ -271,12 +271,12 @@ class MDL {
 		gl.bindBuffer(gl.ARRAY_BUFFER, this.vb);
 		const stride = this.nattrs * 4;
 		let offs = 0;
-		if (prog.hasPos()) offs = setVtxAttr(gl, prog.attLocPos, 3, offs, stride);
-		if (prog.hasNrm()) offs = setVtxAttr(gl, prog.attLocNrm, 3, offs, stride);
-		if (prog.hasRGB()) offs = setVtxAttr(gl, prog.attLocRGB, 3, offs, stride);
-		if (prog.hasTex()) offs = setVtxAttr(gl, prog.attLocTex, 2, offs, stride);
-		if (prog.hasJnt()) offs = setVtxAttr(gl, prog.attLocJnt, 4, offs, stride);
-		if (prog.hasWgt()) offs = setVtxAttr(gl, prog.attLocWgt, 4, offs, stride);
+		offs = setVtxAttr(gl, prog.attLocPos, 3, offs, stride);
+		offs = setVtxAttr(gl, prog.attLocNrm, 3, offs, stride);
+		offs = setVtxAttr(gl, prog.attLocRGB, 3, offs, stride);
+		offs = setVtxAttr(gl, prog.attLocTex, 2, offs, stride);
+		offs = setVtxAttr(gl, prog.attLocJnt, 4, offs, stride);
+		offs = setVtxAttr(gl, prog.attLocWgt, 4, offs, stride);
 
 		gl.bindBuffer(gl.ELEMENT_ARRAY_BUFFER, this.ib);
 	}
