@@ -16,6 +16,10 @@ function hex(x) {
 	return x.toString(16);
 }
 
+function millis() {
+	return performance.now();
+}
+
 function dbgmsg(msg = "") {
 	const dbg = document.getElementById("dbgmsg");
 	if (dbg) {
