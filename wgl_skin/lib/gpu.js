@@ -116,10 +116,10 @@ class GPU_PROG {
 
 	valid() { return this.prog != null; }
 
-	hasPos() { return ckAttLoc(this.attLocPos); }
-	hasNrm() { return ckAttLoc(this.attLocNrm); }
-	hasRGB() { return ckAttLoc(this.attLocRGB); }
-	hasTex() { return ckAttLoc(this.attLocTex); }
-	hasJnt() { return ckAttLoc(this.attLocJnt); }
-	hasWgt() { return ckAttLoc(this.attLocWgt); }
+	get hasPos() { return ckAttLoc(this.attLocPos); }
+	get hasNrm() { return ckAttLoc(this.attLocNrm); }
+	get hasRGB() { return ckAttLoc(this.attLocRGB); }
+	get hasTex() { return ckAttLoc(this.attLocTex); }
+	get hasJnt() { return ckAttLoc(this.attLocJnt); }
+	get hasWgt() { return ckAttLoc(this.attLocWgt); }
 }
