@@ -12,8 +12,6 @@ function loop() {
 	gl.depthMask(true);
 	gl.enable(gl.DEPTH_TEST);
 	gl.depthFunc(gl.LEQUAL);
-	gl.enable(gl.DEPTH_TEST);
-	gl.depthFunc(gl.LEQUAL);
 
 	const cam = scene.cam;
 	const anm = scene.anims["walk"];
